@@ -1,4 +1,4 @@
-# ACC_TEST 改改看
+# ACC_TEST 
 
 ### 建立虛擬環境
 - pip install pipenv
