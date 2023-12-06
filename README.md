@@ -56,8 +56,16 @@
 - python manage.py createsuperuser
 
 ### 建立網頁功能
-- python manage.py startapp user
+- python manage.py startapp acc(功能)
 
 ### 註冊功能
-- settings
+- settings   # 註冊apps裡的class
     - INSTALL_APP 進行新增
+
+
+### views 寫功能
+
+
+### urls分配網址route
+
+### 繼承網頁templates
