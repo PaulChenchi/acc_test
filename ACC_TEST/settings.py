@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 
-# 很重要
+# 很重要要註冊apps
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "acc.apps.AccConfig",
 ]
 
 MIDDLEWARE = [
