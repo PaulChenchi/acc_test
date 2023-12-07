@@ -69,3 +69,6 @@
 ### urls分配網址route
 
 ### 繼承網頁templates
+
+### 使用model建立資料表
+
