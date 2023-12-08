@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .form{
+            background-color: bisque;
+        }
+        .area{
+            background-color: aquamarine;
+            
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>營業資料</title>
 </head>
 <body>
     <h1>Sales_Data</h1>
+    <form action="" method="get" class="form">
+        <label for="store">門店：</label>
+        <select name="store" id="store">
+            <option value="" disabled selected hidden>請選擇門店</option>
+            <option value="5502" >5502英才</option>
+            <option value="5509">5509中壢</option>
+            <option value="5511">5511美麗華</option>
+            <option value="5512">5512西門</option>
+            <option value="5513">5513市政</option>
+            <option value="5516">5516環球</option>
+            <option value="5517">5517桃園</option>
+            <option value="5518">5518夢時代</option>
+            <option value="5520">5520古亭</option>
+            <option value="5521">5521信義</option>
+            <option value="5522">5522華泰</option>
+        </select><br>
+        <label for="startdate">起始日期：</label>
+        <input type="date" id="startdate" name="startdate"><br>
+        <label for="enddate">結束日期：</label>
+        <input type="date" id="enddate" name="enddate">
+    </form>
+    <div class="area"></div>
 </body>
 </html>
