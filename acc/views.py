@@ -7,6 +7,13 @@ from django.contrib.auth import login,logout,authenticate #authenticate 內建�
 # Create your views here.
 # 寫功能的地方
 
+def acc_timeperiod(request):
+    return render(request,"acc/timeperiod.html") 
+
+def acc_checklog(request):
+    return render(request,"acc/checklog.html") 
+
+
 def acc_logot(request):
     logout(request)
     return redirect("login")

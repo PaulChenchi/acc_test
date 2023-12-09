@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>註冊</title>
-</head>
-<body>
-    <h1>註冊中心</h1>
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{form.as_p}} <!--  .as_p 是p標籤的意思  -->
-        <button type="submit">註冊</button>
-    </form>
-    {{message}}
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+ACC營業資料
+{% endblock %}
+{% block style %}
+    <style>
+        .text {
+            background-color: antiquewhite;
+            font-size: 1.4cm;
+            width: 80%;
+            margin: auto;
+
+
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <h1 style="width: 80%; margin-left: auto;margin-right: auto;">使用須知</h1>
+    <div class="text">如需使用此功能請向IT部門提出權限申請表!</div>
+
+
+
+{% endblock %}

@@ -19,6 +19,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path("timeperiod",views.acc_timeperiod,name="timeperiod"),
+    path("checklog",views.acc_checklog,name="checklog"),
     path("logout/",views.acc_logot,name="logout"),
     path("login/",views.acc_login,name="login"),
     path("register/",views.register,name="register"),

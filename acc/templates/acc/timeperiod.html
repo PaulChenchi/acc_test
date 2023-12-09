@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}
+timeperiod
+{% endblock %}
+{% block style %}
+<style>
+    .info {
+        width: 80%;
+        /* 设置容器宽度，可根据需要调整 */
+        height: 200px;
+        /* 设置容器高度，可根据需要调整 */
+        border: 2px solid #333;
+        /* 设置边框样式，可根据需要调整 */
+        padding: 20px;
+        /* 可选：设置内边距，可根据需要调整 */
+        margin: 20px;
+        /* 可选：设置外边距，可根据需要调整 */
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .form{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-color: bisque;
+        width: 80%;
+        border-radius: 5px;
+    }
+
+</style>
+{% endblock %}
+{% block content %}
+<h1>TimePeriod</h1>
+<form action="" method="get" class="form">
+    <select name="store" id="store">
+        <option value="" disabled selected hidden>請選擇門店</option>
+        <option value="5502">5502英才</option>
+        <option value="5509">5509中壢</option>
+        <option value="5511">5511美麗華</option>
+        <option value="5512">5512西門</option>
+        <option value="5513">5513市政</option>
+        <option value="5516">5516環球</option>
+        <option value="5517">5517桃園</option>
+        <option value="5518">5518夢時代</option>
+        <option value="5520">5520古亭</option>
+        <option value="5521">5521信義</option>
+        <option value="5522">5522華泰</option>
+    </select><br>
+    <label for="startdate">起始日期：</label><br>
+    <input type="date" id="startdate" name="startdate"><br>
+    <label for="enddate">結束日期：</label><br>
+    <input type="date" id="enddate" name="enddate"><br>
+    <label for="keyword">查詢關鍵字：</label><br>
+    <input type="text" id="keyword" name="keyword">
+    <p>
+        <input type="submit" name="serch" value="查詢">
+        <input type="submit" name="output" value="輸出">
+
+    </p>
+</form>
+<div class="info"></div>
+{% endblock %}

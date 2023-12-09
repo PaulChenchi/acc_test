@@ -83,6 +83,33 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "todolist",
+#         "USER": "aws_root",
+#         "PASSWORD": "tp6fu371!",
+#         "HOST": "database-1.cyyccblgolkh.ap-northeast-1.rds.amazonaws.com",
+#         "PORT": "3306",
+#     }
+# }
+
+# 這樣改
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'sql_server.pyodbc',
+#         'NAME': '您的資料庫名稱',
+#         'USER': '您的使用者名稱',
+#         'PASSWORD': '您的密碼',
+#         'HOST': '您的資料庫伺服器',  # 您可以使用 IP 位址或網域名稱
+#         'PORT': '',  # 留空以使用預設埠號（通常為 1433）
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',  # 使用適當的 ODBC 驅動程式
+#         },
+#     },
+# }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

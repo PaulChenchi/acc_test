@@ -1,17 +1,48 @@
 {% extends 'base.html' %}
 {% block title %}
-營業資料
+ACC營業資料
 {% endblock %}
+{% block style %}
+<style>
+    .info {
+        width: 76%;
+        /* 设置容器宽度，可根据需要调整 */
+        height: 500px;
+        /* 设置容器高度，可根据需要调整 */
+        border: 2px solid #333;
+        /* 设置边框样式，可根据需要调整 */
+        padding: 20px;
+        /* 可选：设置内边距，可根据需要调整 */
+        margin: 20px;
+        /* 可选：设置外边距，可根据需要调整 */
+        margin-left: auto;
+        margin-right: auto;
 
+
+    }
+
+    .searchbar {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-color: beige;
+        width: 80%;
+        height: 200px;
+        border-radius: 5px;
+
+
+    }
+</style>
+{% endblock %}
 {% block content %}
 
-
-    <h1>Sales_Data</h1>
+<div class="searchbar">
+    <h1 style="margin-left: auto;margin-right: auto;text-align: center;">門店營業資料</h1>
     {% if user.is_authenticated %}
     <form action="" method="get" class="form">
         <select name="store" id="store">
             <option value="" disabled selected hidden>請選擇門店</option>
-            <option value="5502" >5502英才</option>
+            <option value="5502">5502英才</option>
             <option value="5509">5509中壢</option>
             <option value="5511">5511美麗華</option>
             <option value="5512">5512西門</option>
@@ -29,12 +60,11 @@
         <input type="date" id="enddate" name="enddate">
         <p>
             <input type="submit" name="serch" value="查詢">
-           
         </p>
     </form>
     {% else %}
-    <h1>請先登入!!!</h1>
+    <h1 style="margin-left: auto;margin-right: auto;text-align: center;color:red;">請先登入!!!</h1>
     {% endif %}
-    
-
+</div>
+<div class="info"></div>
 {% endblock %}
