@@ -3,10 +3,13 @@ from django.http import HttpResponse #專門封裝資訊透過他傳遞
 from django.contrib.auth.forms import UserCreationForm  # django 內建表單模組
 from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate #authenticate 內建登入
+
 # Create your views here.
 # 寫功能的地方
 
-
+def acc_logot(request):
+    logout(request)
+    return redirect("login")
 def acc_login(request):
     message=''
     if request.method=="POST":
@@ -26,13 +29,13 @@ def acc_login(request):
                 else:
                     login(request,user) # authenticate紀錄登入
                     message="登入成功！"
+                    return redirect("sales_data")
         print(user)
             
     return render(request,"acc/login.html",{"message":message})
 
 def sales_data(request):
     # return HttpResponse("<h1>Welcome to Acc_sales APP")
-
     return render(request,"acc/sales_data.html") 
 
 

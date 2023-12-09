@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <style>
-        .form{
-            background-color: bisque;
-        }
-        .area{
-            background-color: aquamarine;
-            
-        }
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>營業資料</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}
+營業資料
+{% endblock %}
+
+{% block content %}
+
+
     <h1>Sales_Data</h1>
+    {% if user.is_authenticated %}
     <form action="" method="get" class="form">
-        <label for="store">門店：</label>
         <select name="store" id="store">
             <option value="" disabled selected hidden>請選擇門店</option>
             <option value="5502" >5502英才</option>
@@ -36,7 +27,14 @@
         <input type="date" id="startdate" name="startdate"><br>
         <label for="enddate">結束日期：</label>
         <input type="date" id="enddate" name="enddate">
+        <p>
+            <input type="submit" name="serch" value="查詢">
+           
+        </p>
     </form>
-    <div class="area"></div>
-</body>
-</html>
+    {% else %}
+    <h1>請先登入!!!</h1>
+    {% endif %}
+    
+
+{% endblock %}

@@ -19,6 +19,6 @@ from django.urls import path,include #引用外部設定
 
 
 urlpatterns = [
-    path("acc/",include("acc.urls")),
+    path("",include("acc.urls")),
     path("admin/", admin.site.urls),
 ]
